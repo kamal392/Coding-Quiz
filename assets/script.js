@@ -44,7 +44,6 @@ const clearScrBtn = document.querySelector("#clearscores");
 
 const viewScrBtn = document.querySelector("#view-scores");
 
-
 const questions = [
   // array of objects
   {
@@ -116,3 +115,16 @@ const questions = [
   },
 ];
 
+function setTime() {
+  let timerInterval = setInterval(function () {
+    secondsLeft--;
+    timeEl.textContent = `Time:${secondsLeft}s`;
+
+    if (secondsLeft == 0 || questionCount == questions.length) {
+      clearInterval(timerInterval);
+      questionsEl.style.display = "none";
+      finalEl.style.display = "block";
+      scoreEl.textContent = textContent;
+    }
+  }, 1000);
+}
