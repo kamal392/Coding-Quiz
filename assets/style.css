@@ -1,12 +1,89 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
+* {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+
 html, body {
     height: 100%;
 }
-
+/*body styling*/
 body {
     
     background-color: cornsilk;
     background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover; 
     display: flex;
     flex-direction: column;
 }
+
+/* Main content */
+main {
+    
+    flex: 1 0 auto;
+}
+
+#questions,
+#final,
+#highscores,
+#yaynay {
+    display: none;  
+  } 
+
+  /* Remove bullet points from answers list */
+ul.nobullets {
+    list-style-type: none;
+    }
+
+    /* Answer button styling */
+.ansBtn,
+.ansBtn:hover,
+.ansBtn:active,
+.ansBtn:focus,
+.ansBtn:active:focus 
+{
+    box-shadow: 0 0.5rem 0.5rem 0.1rem rgba(80, 79, 79, 0.4);
+    outline: none;
+    background-color: #ffffff;
+    
+}
+/* Responsive Design*/
+@media (max-width: 480px) {
+    body {
+        background-color:lightblue;
+    }
+}
+/*main div*/
+.main-div{
+    background-color: hsl(210,92%,90%);
+    }
+    .inner-div{
+      background-color: #fff;
+      padding: 3rem 8rem;
+      border-radius: 1rem;
+      box-shadow: 0 1rem 1rem 0.7rem rgb(0,0,0,0.4);
+    }
+
+.positionbtn{
+text-align: center;
+margin-top: 30px;
+
+
+}
+/*Timer style*/
+.timeralign{
+    margin: 10px;
+    text-align: right;
+    color: red;
+}
+/*start button styling*/
+.startbtn{
+    margin:50px auto;
+    display:block;
+
+}
+
