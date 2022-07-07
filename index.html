@@ -3,18 +3,99 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width , initial-scale=1.0, shrink-to-fit=no" >
+    <meta name="viewport" content="width=device-width ,initial-scale=1.0, shrink-to-fit=no" >
     <link rel="stylesheet" href="./assets/style.css">
     <title> Quiz</title>
 </head>
 
 <body>
 
-    <header>
-      
+<main>
+    <div >
+            <header>
+                
+                     <div>
+                   
+                         <button id="view-scores" type="button" >View High Scores</button> <p class="time timeralign">Time:75s</p>
+           
+                     </div>
+                        
+                 </div>
+             </header>
+
+             
+<section id="intro">
+    <div >
+        <div ></div>
+        <div >
+            <h1 class="positionbtn" > Coding Quiz Challenge!</h1><br>
+            <p class="positionbtn">Try to answer the following javascript code questions within the time limit.<br> Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+            <button id="start" type="button" class="startbtn" >Start Quiz</button></p>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="questions" >
+    <div>
+        <div ></div>
         <div>
-          
-            <div>
+            <h2 id="question">I'm a question</h2>
+            <ul >
+                <li ><button id="answer1" value="0" type="button"
+                        class=" ansBtn">Answer1</button></li>  
+                    <br>  
+                <li ><button id="answer2" value="1" type="button"
+                        class=" ansBtn">Answer2</button></li>
+                    <br>
+                <li ><button id="answer3" value="2" type="button"
+                        class=" ansBtn">Answer3</button></li>    
+                    <br>       
+                <li ><button id="answer4" value="3" type="button"
+                        class=" ansBtn">Answer4</button></li><br>
+            </ul>
+            <div id="yaynay" class="font-weight-light font-italic">
+                <hr>
                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="final">
+    <div >
+        <div ></div>
+        <div >
+            <h2> All Done!</h2>
+            <p>Your final score is : <span id="score" >0</span></p>
+           
+            <p>Enter initials: <span ><input placeholder="initials" id="initials" /></span>
+                <button id="submit-score" >Submit</button>
+            </p>
+        </div>
+    </div>
+</section>
+<section id="highscores">
+    <div >
+        <div ></div>
+        <div >
+                <h2>High Scores</h2>
+                
+                <ol id="score-list">
+               
+                </ol>
+                <button id="goback" >Go back</button>
+                <button id="clearscores" >Clear scores</button>
+        </div>
+    </div>
+</section>
+
+
 </div>
-</header>
+</main>
+
+<script src="./assets/script.js"></script>
+
+</body>
+</html>
