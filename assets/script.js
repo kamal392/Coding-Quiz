@@ -120,11 +120,11 @@ function setTime() {
     secondsLeft--;
     timeEl.textContent = `Time:${secondsLeft}s`;
 
-    if (secondsLeft == 0 || questionCount == questions.length) {
+    if (secondsLeft === 0 || questionCount === questions.length) {
       clearInterval(timerInterval);
       questionsEl.style.display = "none";
       finalEl.style.display = "block";
-      scoreEl.textContent = textContent;
+      scoreEl.textContent = secondsLeft;
     }
   }, 1000);
 }
