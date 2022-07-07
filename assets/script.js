@@ -198,4 +198,8 @@ function addScore(event) {
     li.textContent = `${scoreList[i].initials}: ${scoreList[i].score}`;
     scoreListEl.append(li);
   }
+    storeScores();
+}
+function storeScores() {
+  localStorage.setItem("scoreList", JSON.stringify(scoreList));
 }
