@@ -34,17 +34,12 @@ main {
     display: none;  
   } 
 
-  /* Remove bullet points from answers list */
-ul.nobullets {
-    list-style-type: none;
-    }
-
     /* Answer button styling */
 .ansBtn,
 .ansBtn:hover,
 .ansBtn:active,
 .ansBtn:focus,
-.ansBtn:active:focus 
+.ansBtn:active:focus
 {
     box-shadow: 0 0.5rem 0.5rem 0.1rem rgba(80, 79, 79, 0.4);
     outline: none;
@@ -52,7 +47,7 @@ ul.nobullets {
     
 }
 /* Responsive Design*/
-@media (max-width: 481px) {
+@media (max-width: 480px) {
     body {
         background-color:lightblue;
     }
@@ -76,13 +71,13 @@ margin-top: 30px;
 }
 /*Timer style*/
 .timeralign{
-    margin: 10px;
+    margin: 15px;
     text-align: right;
     color: red;
 }
 /*start button styling*/
 .startbtn{
-    margin:50px auto;
+    margin:45px auto;
     display:block;
 
 }
