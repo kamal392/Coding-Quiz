@@ -14,11 +14,11 @@ let questionCount = 0;
 
 const yaynayEl = document.querySelector("#yaynay");
 
-const finalEl = document.querySelector("final");
+const finalEl = document.querySelector("#final");
 
 let initialsInput = document.querySelector("#initials");
 
-const highscoresEl = document.querySelector("#highscore");
+const highscoresEl = document.querySelector("#highscores");
 
 let scoreListEl = document.querySelector("#score-list");
 
@@ -26,7 +26,7 @@ let scoreList = [];
 
 const startBtn = document.querySelector("#start");
 
-const ansBtn = document.querySelectorAll("buttonansBtn");
+const ansBtn = document.querySelectorAll("button.ansBtn");
 
 const ans1Btn = document.querySelector("#answer1");
 
@@ -198,8 +198,49 @@ function addScore(event) {
     li.textContent = `${scoreList[i].initials}: ${scoreList[i].score}`;
     scoreListEl.append(li);
   }
-    storeScores();
+  storeScores();
+  displayScores();
 }
 function storeScores() {
   localStorage.setItem("scoreList", JSON.stringify(scoreList));
 }
+
+function displayScores() {
+  let storedScoreList = JSON.parse(localStorage.getItem("scoreList"));
+
+  if (storedScoreList !== null) {
+    scoreList = storedScoreList;
+  }
+}
+
+function clearScores() {
+  localStorage.clear();
+  scoreListEl.innerHTML = "";
+}
+
+startBtn.addEventListener("click", startQuiz);
+
+ansBtn.forEach((item) => {
+  item.addEventListener("click", checkAnswer);
+});
+
+submitScrBtn.addEventListener("click", addScore);
+
+goBackBtn.addEventListener("click", function () {
+  highscoresEl.style.display = "none";
+  introEl.style.display = "block";
+  secondsLeft = 75;
+  timeEl.textContent = `Time:${secondsLeft}s`;
+});
+
+clearScrBtn.addEventListener("click", clearScores);
+
+viewScrBtn.addEventListener("click", function () {
+  if (highscoresEl.style.display === "none") {
+    highscoresEl.style.display = "block";
+  } else if (highscoresEl.style.display === "block") {
+    highscoresEl.style.display = "none";
+  } else {
+    return alert("No scores to show.");
+  }
+});
