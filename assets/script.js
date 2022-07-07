@@ -30,11 +30,11 @@ const ansBtn = document.querySelectorAll("buttonansBtn");
 
 const ans1Btn = document.querySelector("#answer1");
 
-const ans2Btn = document.querySelector("#answer1");
+const ans2Btn = document.querySelector("#answer2");
 
-const ans3Btn = document.querySelector("#answer1");
+const ans3Btn = document.querySelector("#answer3");
 
-const ans4Btn = document.querySelector("#answer1");
+const ans4Btn = document.querySelector("#answer4");
 
 const submitScrBtn = document.querySelector("#submit-score");
 
@@ -43,3 +43,76 @@ const goBackBtn = document.querySelector("#goback");
 const clearScrBtn = document.querySelector("#clearscores");
 
 const viewScrBtn = document.querySelector("#view-scores");
+
+
+const questions = [
+  // array of objects
+  {
+    // question 0
+    question: "What does HTML stand for?",
+    answers: [
+      "1.Hyper Text Markup Language",
+      "2. Hyper Text Preprocessor",
+      "3. Hyper Text Multiple Language",
+      "4.Hyper Tool Multi Language ",
+    ],
+    correctAnswer: "0",
+  },
+  {
+    // question 1
+    question: "What does CSS stand for?.",
+    answers: [
+      "1.Common Style Sheet ",
+      "2.  Cascading Style Sheet",
+      "3. Colorful Style Sheet",
+      "4. Computer Style Sheet",
+    ],
+    correctAnswer: "1",
+  },
+  {
+    // question 2
+    question: "What does PHP stand for?",
+    answers: [
+      "1. Hypertext Programming",
+      "2.Hypertext Preprocessor",
+      "3. Hypertext Preprogramming ",
+      "4. all of the above",
+    ],
+    correctAnswer: "1",
+  },
+  {
+    // question 3
+    question: "What does SQL stand for?",
+    answers: [
+      "1. Stylish Question Language",
+      "2. Structured Query Language",
+      "3. Stylesheet Query Language",
+      "4. Statement Question Language",
+    ],
+    correctAnswer: "1",
+  },
+  {
+    // question 4
+    question: "What does XML stand for?",
+    answers: [
+      "1. eXecutable Multiple Language",
+      "2. eXTra Multi-Program Language",
+      "3. eXtensible Markup Language",
+      "4. eXamine Multiple Language",
+    ],
+    correctAnswer: "2",
+  },
+  {
+    // question 5
+    question:
+      "A very useful tool used during development and debugging for printing content to the debugger is:",
+    answers: [
+      "1. Javascript",
+      "2. terminal/bash",
+      "3. for loops",
+      "4. Console.log",
+    ],
+    correctAnswer: "3",
+  },
+];
+
