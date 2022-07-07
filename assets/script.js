@@ -44,6 +44,7 @@ const clearScrBtn = document.querySelector("#clearscores");
 
 const viewScrBtn = document.querySelector("#view-scores");
 
+/// Questions ////////////////
 const questions = [
   // array of objects
   {
@@ -115,6 +116,7 @@ const questions = [
   },
 ];
 
+//Set Timer Function
 function setTime() {
   let timerInterval = setInterval(function () {
     secondsLeft--;
@@ -129,6 +131,7 @@ function setTime() {
   }, 1000);
 }
 
+//Start Quiz Function
 function startQuiz() {
   introEl.style.display = "none";
   questionsEl.style.display = "block";
@@ -136,6 +139,8 @@ function startQuiz() {
   setTime();
   setQuestion(questionCount);
 }
+
+//SetQuestion Function
 function setQuestion(id) {
   if (id < questions.length) {
     questionEl.textContent = questions[id].question;
@@ -145,6 +150,7 @@ function setQuestion(id) {
     ans4Btn.textContent = questions[id].answers[3];
   }
 }
+//CheckAnswer Function
 function checkAnswer(event) {
   event.preventDefault();
 
@@ -174,6 +180,7 @@ function checkAnswer(event) {
   setQuestion(questionCount);
 }
 
+// Add Score funtion
 function addScore(event) {
   event.preventDefault();
 
@@ -183,7 +190,7 @@ function addScore(event) {
   let init = initialsInput.value.toUpperCase();
   scoreList.push({ initials: init, score: secondsLeft });
 
-  // sort scores
+  // sort scores//
   scoreList = scoreList.sort((a, b) => {
     if (a.score < b.score) {
       return 1;
@@ -201,6 +208,8 @@ function addScore(event) {
   storeScores();
   displayScores();
 }
+
+//
 function storeScores() {
   localStorage.setItem("scoreList", JSON.stringify(scoreList));
 }
